@@ -22,6 +22,12 @@ if (!supabaseUrl || !supabaseKey) {
   }
 }
 
+console.log("Diagnóstico Supabase:", {
+  urlConfigurada: Boolean(supabaseUrl),
+  chaveConfigurada: Boolean(supabaseKey),
+  erroConfiguracao: supabaseConfigError || "Nenhum"
+});
+
 export { supabaseConfigError };
 export const supabase = supabaseConfigError
   ? null
